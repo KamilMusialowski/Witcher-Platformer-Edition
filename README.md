@@ -14,5 +14,5 @@ Boss fights
 Collectibles and power-ups
 High-quality artwork and sound effects (actually not high-quality)
 ## Development Team
-Kamil Musiałowski
+Kamil Musiałowski, 
 Grzegorz Nowak
