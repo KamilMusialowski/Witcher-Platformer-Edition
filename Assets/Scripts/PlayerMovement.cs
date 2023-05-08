@@ -42,6 +42,12 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("run", horizontalInput != 0);
         anim.SetBool("grounded", grounded);
 
+        //background following the player. Like this it works, if I make playerPosition private etc it does not work.
+        Vector3 playerPosition = body.position;
+        playerPosition.y += 2;
+        playerPosition.z = 0;
+        GameObject.FindGameObjectWithTag("Background").transform.position = playerPosition;
+
     }
 
     private void Jump()
