@@ -59,3 +59,6 @@ TagManager:
   - name: Ground
     uniqueID: 273160581
     locked: 0
+  - name: Igni
+    uniqueID: 3801512157
+    locked: 0

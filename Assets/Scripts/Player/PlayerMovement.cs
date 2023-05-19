@@ -9,18 +9,19 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 transformLeft = new Vector3(-4, 4, 1);
     private Vector3 transformRight = new Vector3(4, 4, 1);
     private bool grounded;
+    private float horizontalInput;
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        
 
     }
 
     private void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-
+        horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector3(horizontalInput*speedMovement, body.velocity.y);
 
         //Flipping right and left
@@ -63,5 +64,10 @@ public class PlayerMovement : MonoBehaviour
         {
             grounded = true;
         }
+    }
+
+    public bool canAttack()
+    {
+        return horizontalInput==0 && grounded;
     }
 }
