@@ -21471,6 +21471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMovement: 10
   speedJump: 16
+  backgorundFollows: 1
 --- !u!95 &1566735395
 Animator:
   serializedVersion: 5

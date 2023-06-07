@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speedMovement;
     [SerializeField] private float speedJump;
+    [SerializeField] bool backgorundFollows;
     private Rigidbody2D body;
     private Animator anim;
     private Vector3 transformLeft = new Vector3(-4, 4, 1);
@@ -43,11 +45,14 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("run", horizontalInput != 0);
         anim.SetBool("grounded", grounded);
 
-        //background following the player. Like this it works, if I make playerPosition private etc it does not work.
-        Vector3 playerPosition = body.position;
-        playerPosition.y += 2;
-        playerPosition.z = 0;
-        GameObject.FindGameObjectWithTag("Background").transform.position = playerPosition;
+        if (backgorundFollows && SceneManager.GetActiveScene().buildIndex==1)
+        {
+            //background following the player. Like this it works, if I make playerPosition private etc it does not work.
+            Vector3 playerPosition = body.position;
+            playerPosition.y += 2;
+            playerPosition.z = 0;
+            GameObject.FindGameObjectWithTag("Background").transform.position = playerPosition;
+        }
 
     }
 
