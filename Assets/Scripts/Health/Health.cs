@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -27,7 +28,7 @@ public class Health : MonoBehaviour
         }
         else
         {
-            //dead
+            SceneManager.LoadScene(4);
         }
     }
     
