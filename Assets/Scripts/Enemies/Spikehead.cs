@@ -10,10 +10,17 @@ public class Spikehead : EnemyDamage
     private float checkTimer;
     private Vector3 destination;
     private Vector3[] directions = new Vector3[4];
+    private Material material;
+    private float fade = 1.0f;
 
     private bool attacking;
 
-    
+    private void Start()
+    {
+        material = GetComponent<SpriteRenderer>().material;
+    }
+
+
 
     private void OnEnable()
     {
@@ -31,6 +38,17 @@ public class Spikehead : EnemyDamage
             {
                 CheckForPlayer();
             }
+        }
+        if(numberOfAttacksMax <= 0)
+        {
+
+            fade -= Time.deltaTime/2;
+            if(fade <= 0 )
+            {
+                fade = 0;
+                gameObject.SetActive(false);
+            }
+            material.SetFloat("_Fade", fade);
         }
     }
 
