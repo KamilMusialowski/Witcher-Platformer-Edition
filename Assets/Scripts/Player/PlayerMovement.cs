@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("run", horizontalInput != 0);
         anim.SetBool("grounded", grounded);
 
-        if (backgorundFollows && SceneManager.GetActiveScene().buildIndex==1)
+        if (backgorundFollows && (SceneManager.GetActiveScene().buildIndex==1 || SceneManager.GetActiveScene().buildIndex == 3))
         {
             //background following the player. Like this it works, if I make playerPosition private etc it does not work.
             Vector3 playerPosition = body.position;

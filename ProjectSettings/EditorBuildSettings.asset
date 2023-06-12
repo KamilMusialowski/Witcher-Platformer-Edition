@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/DeathScreen.unity
     guid: ac579c26792e04f4aa6e83af4a8eba0d
+  - enabled: 1
+    path: Assets/Levels/EndGameScreen.unity
+    guid: ec0023ae14d406e43acb23864162b699
   m_configObjects: {}
