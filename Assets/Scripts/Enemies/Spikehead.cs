@@ -58,7 +58,6 @@ public class Spikehead : EnemyDamage
 
         for(int i = 0; i < directions.Length; i++)
         {
-            //Debug.DrawRay(transform.position, directions[i], Color.red);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, directions[i], range, playerLayer);
 
             if(hit.collider != null && !attacking)
