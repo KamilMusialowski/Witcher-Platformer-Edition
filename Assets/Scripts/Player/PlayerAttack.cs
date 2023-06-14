@@ -68,9 +68,23 @@ public class PlayerAttack : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.H) && cooldownTimer > attackCooldown)
+        {
             Attack();
-
+            
+        }
         cooldownTimer += Time.deltaTime;
+
+
+        if (Input.GetKeyDown(KeyCode.U))
+            SwordAttack();
+
+        
+    }
+
+    private void SwordAttack()
+    {
+        anim.SetTrigger("swordAttack");
+
     }
 
     private void Attack()
