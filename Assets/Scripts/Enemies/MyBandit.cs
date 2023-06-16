@@ -18,6 +18,9 @@ public class MyBandit : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float cdTimer = Mathf.Infinity;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip attackSound;
+
     private Animator anim;
     private Health playerHealth;
 
@@ -44,6 +47,7 @@ public class MyBandit : MonoBehaviour
                 cdTimer = 0;
                 anim.SetInteger("AnimState", 1);
                 anim.SetTrigger("Attack");
+                AudioSource.PlayClipAtPoint(attackSound, transform.position, 1);
                 //anim.SetInteger("AnimState", 1);
             }
         }

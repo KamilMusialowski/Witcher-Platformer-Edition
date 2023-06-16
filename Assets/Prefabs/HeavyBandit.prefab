@@ -169,3 +169,4 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 1024
+  attackSound: {fileID: 8300000, guid: 1a421c4a59f60fe4fb7153b3bcdc1e37, type: 3}

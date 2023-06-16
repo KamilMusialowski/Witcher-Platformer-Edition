@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 754186572401829937}
   - component: {fileID: 754186572401829939}
   - component: {fileID: 754186572401829938}
-  - component: {fileID: 754186572401829932}
+  - component: {fileID: 8660840559956004209}
   m_Layer: 0
   m_Name: Swallow
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754186572401829936}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.53, y: 0.77001953, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.24}
   m_EdgeRadius: 0
---- !u!114 &754186572401829932
+--- !u!114 &8660840559956004209
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 754186572401829936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06ca789970f0b5a4a937d6a9f61a1714, type: 3}
+  m_Script: {fileID: 11500000, guid: dc01d20ad7d782f4cb14954822d3ea7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healthValue: 1
+  drinkSuccess: {fileID: 8300000, guid: a1abaae520740664e9577f4400f533c1, type: 3}
+  drinkFail: {fileID: 8300000, guid: a1ecff8146d27694fbe76e8736b486af, type: 3}

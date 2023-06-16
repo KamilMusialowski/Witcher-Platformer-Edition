@@ -2029,14 +2029,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
-    - target: {fileID: 9038024354137770277, guid: e2787780db924ca4c82ea35fc561aa52, type: 3}
-      propertyPath: test
-      value: 
-      objectReference: {fileID: 8300000, guid: 2955ad16f1cc4e64cb2ff9d124fece50, type: 3}
-    - target: {fileID: 9038024354137770277, guid: e2787780db924ca4c82ea35fc561aa52, type: 3}
-      propertyPath: audio
-      value: 
-      objectReference: {fileID: 8300000, guid: 2955ad16f1cc4e64cb2ff9d124fece50, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2787780db924ca4c82ea35fc561aa52, type: 3}
 --- !u!1 &345798223
@@ -3464,6 +3456,10 @@ PrefabInstance:
     - target: {fileID: 754186572401829937, guid: b57bf4650ee733d48a140dc032d9f9fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660840559956004209, guid: b57bf4650ee733d48a140dc032d9f9fe, type: 3}
+      propertyPath: healthValue
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b57bf4650ee733d48a140dc032d9f9fe, type: 3}
@@ -10095,7 +10091,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cb9aa6a078da56147930ef876ea8dc46, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -13692,6 +13688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Saw
       objectReference: {fileID: 0}
+    - target: {fileID: 4756261276782637346, guid: 49963521d015ef348a27fda5d300aa57, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4756261276782637347, guid: 49963521d015ef348a27fda5d300aa57, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -15380,6 +15380,10 @@ PrefabInstance:
     - target: {fileID: 754186572401829937, guid: b57bf4650ee733d48a140dc032d9f9fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660840559956004209, guid: b57bf4650ee733d48a140dc032d9f9fe, type: 3}
+      propertyPath: healthValue
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b57bf4650ee733d48a140dc032d9f9fe, type: 3}
