@@ -58,11 +58,13 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject[] ignis;
 
     private Animator anim;
+    private BoxCollider2D boxCollider;
     private float cooldownTimer = Mathf.Infinity;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
@@ -84,7 +86,6 @@ public class PlayerAttack : MonoBehaviour
     private void SwordAttack()
     {
         anim.SetTrigger("swordAttack");
-
     }
 
     private void Attack()
@@ -109,5 +110,11 @@ public class PlayerAttack : MonoBehaviour
         }
         return 0;
     }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Enemy")
+    //        collision.GetComponent<Health>().TakeDamage(1);
+    //}
 }
 
