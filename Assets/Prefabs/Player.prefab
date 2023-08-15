@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8191337198687566885}
   - component: {fileID: 5037054130439431634}
   - component: {fileID: 6176958241609363021}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Igni (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 6667033320203525949}
   - component: {fileID: 5178982566313919339}
   - component: {fileID: 1082031204829615631}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Igni
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 7905783698852657165}
   - component: {fileID: 6170214135304289175}
   - component: {fileID: 4641057599172341404}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Igni (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 5194255600678271068}
   - component: {fileID: 7620999527507786308}
   - component: {fileID: 2552093232476587884}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Igni (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,7 +690,7 @@ GameObject:
   - component: {fileID: 6170342171513253041}
   - component: {fileID: 1442835422749776474}
   - component: {fileID: 8361706761863501995}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Igni (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -905,7 +905,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8353384355792827877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.33, y: 0.0079956055, z: 9.134771}
+  m_LocalPosition: {x: 0.228, y: 0.0079956055, z: 9.134771}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1122,6 +1122,9 @@ MonoBehaviour:
   - {fileID: 6033787791724497184}
   - {fileID: 834498545174098029}
   - {fileID: 5451345497820906058}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!114 &7987449166847669309
 MonoBehaviour:
   m_ObjectHideFlags: 0
