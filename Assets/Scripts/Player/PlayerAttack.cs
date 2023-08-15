@@ -61,6 +61,9 @@ public class PlayerAttack : MonoBehaviour
     private BoxCollider2D boxCollider;
     private float cooldownTimer = Mathf.Infinity;
 
+    private float swordRange = 0.5f;
+    public LayerMask enemyLayer;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -78,14 +81,21 @@ public class PlayerAttack : MonoBehaviour
 
 
         if (Input.GetKeyDown(KeyCode.U))
-            SwordAttack();
+            StartCoroutine(SwordAttack());
 
         
     }
 
-    private void SwordAttack()
+    private IEnumerator SwordAttack()
     {
         anim.SetTrigger("swordAttack");
+        
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(firePoint.position, swordRange, enemyLayer);
+        yield return new WaitForSeconds(0.5f);
+        foreach (Collider2D enemy in  hitEnemies)
+        {
+            enemy.GetComponent<MyBandit>().TakeDamage(2);
+        }
     }
 
     private void Attack()
@@ -113,8 +123,10 @@ public class PlayerAttack : MonoBehaviour
 
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
-    //    if (collision.tag == "Enemy")
-    //        collision.GetComponent<Health>().TakeDamage(1);
+    //    if (this.swordCollision && collision.tag == "Enemy")
+    //        collision.GetComponent<MyBandit>().TakeDamage(1);
     //}
+
+
 }
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3685122520484452467}
   - component: {fileID: 3685122520484452466}
   - component: {fileID: 3685122520484452469}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LightBandit
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51ec75d72f11b4d4b89d7dcfcf67c6ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 1
   attackCooldown: 2
   range: 1
   damage: 1

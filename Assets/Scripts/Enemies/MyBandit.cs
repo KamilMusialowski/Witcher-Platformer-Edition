@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MyBandit : MonoBehaviour
 {
+    [Header("Bandit Health")]
+    [SerializeField] private float maxHealth;
+    private float currentHealth;
+
+
     [Header("Attack Parameters")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
@@ -30,6 +35,7 @@ public class MyBandit : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
+        this.currentHealth = this.maxHealth;
     }
 
     // Update is called once per frame
@@ -56,6 +62,20 @@ public class MyBandit : MonoBehaviour
         if (enemyPatrol != null)
             //enemyPatrol.enabled = !PlayerInView();
             enemyPatrol.enabled = !PlayerInRange();
+
+        if(this.currentHealth <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        this.currentHealth -= damage;
+        if (this.currentHealth <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private bool PlayerInRange()

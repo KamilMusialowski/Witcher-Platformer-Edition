@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5036524744232578150}
   - component: {fileID: 5036524744232578151}
   - component: {fileID: 5036524744232578152}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: HeavyBandit
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51ec75d72f11b4d4b89d7dcfcf67c6ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 2
   attackCooldown: 3.5
   range: 0.846
   damage: 2
